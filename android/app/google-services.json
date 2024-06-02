@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "234929160621",
+    "project_id": "text-it-app-5d0f0",
+    "storage_bucket": "text-it-app-5d0f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234929160621:android:1b14874ee77188ae5ee124",
+        "android_client_info": {
+          "package_name": "com.example.text_it_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQMEuJ9l0mr3ELZQTLOswKpmE4_AJmJxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
