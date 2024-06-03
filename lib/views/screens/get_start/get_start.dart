@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:text_it_app/aspect/constant/strings.dart';
 
 import '../../../aspect/constant/app_font_text_styles.dart';
+import '../../../aspect/constant/assets.dart';
+import '../../../aspect/constant/dimension_constants.dart';
 import '../../../aspect/constant/ui_helper.dart';
 import '../../widget/shered_widget/custom_button_with_background.dart';
 import '../../widget/shered_widget/or_widget.dart';
+import '../../widget/shered_widget/social_media.dart';
 
 class GetStartView extends StatelessWidget {
   const GetStartView({super.key});
@@ -18,14 +19,16 @@ class GetStartView extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/background/Splash.jpg'),
+                image: AssetImage(AppAssets.background),
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+            padding: const EdgeInsets.symmetric(
+                vertical: DimensionConstants.px30,
+                horizontal: DimensionConstants.px20),
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -33,51 +36,24 @@ class GetStartView extends StatelessWidget {
                     AppString.connectFriendsEasilyQuickly,
                     style: AppFontTextStyles.poppins(fontSize: 80),
                   ),
-                 SizeBoxForHight(20),
+                  SizeBoxForHight(DimensionConstants.px20),
                   Text(
                     AppString
                         .ourChatAppIsThePerfectWayToStayConnectedWithFriendsAndFamily,
                     style: AppFontTextStyles.poppins(
                         fontSize: 18, color: Colors.white.withOpacity(0.5)),
                   ),
-                                 SizeBoxForHight(20),
-
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CircleAvatar(
-                        radius: 35,
-                        backgroundColor: Colors.white.withOpacity(0.2),
-                        child: const FaIcon(FontAwesomeIcons.facebook,
-                            color: Colors.white, size: 40),
-                      ),
-                                      SizeBoxForWight(20),
-
-                      CircleAvatar(
-                        radius: 35,
-                        backgroundColor: Colors.white.withOpacity(0.2),
-                        child: const FaIcon(FontAwesomeIcons.google,
-                            color: Colors.white, size: 40),
-                      ),
-                      SizeBoxForWight(15),
-                      CircleAvatar(
-                        radius: 35,
-                        backgroundColor: Colors.white.withOpacity(0.2),
-                        child: const FaIcon(FontAwesomeIcons.apple,
-                            color: Colors.white, size: 40),
-                      ),
-                    ],
-                  ),
-                 SizeBoxForHight(20),
+                  SizeBoxForHight(DimensionConstants.px20),
+                  SocialMediaRow(),
+                  SizeBoxForHight(DimensionConstants.px20),
                   const OrWidget(),
-                    SizeBoxForHight(20),
+                  SizeBoxForHight(DimensionConstants.px20),
                   CustomTextButtonWithColorBackground(
                     text: AppString.signUpWithEmail,
                     textStyle: AppFontTextStyles.poppins(fontSize: 20),
                     onPressed: () {},
                   ),
-                   SizeBoxForHight(20),
+                  SizeBoxForHight(DimensionConstants.px20),
                   RichText(
                     text: TextSpan(
                       text: '${AppString.existingAccount} ',
