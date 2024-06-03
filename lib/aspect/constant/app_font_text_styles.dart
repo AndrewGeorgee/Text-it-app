@@ -9,12 +9,13 @@ class AppFontTextStyles {
     double? height,
     Color color = ColorConstants.white,
     bool isUnderline = false,
+    FontWeight fontWeight = FontWeight.w500,
     double fontSize = DimensionConstants.px14,
     double? letterSpacing,
   }) =>
       GoogleFonts.poppins(
         fontSize: fontSize,
-        fontWeight: FontWeight.w500,
+        fontWeight: fontWeight,
         color: color,
         height: height,
         decoration:
